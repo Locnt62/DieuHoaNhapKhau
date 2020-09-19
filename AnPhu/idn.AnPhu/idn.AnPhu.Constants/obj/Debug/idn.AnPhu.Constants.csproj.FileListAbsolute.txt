@@ -1,0 +1,11 @@
+E:\other\AngularJs\MyProject\AnPhu\idn.AnPhu\idn.AnPhu.Constants\bin\Debug\idn.AnPhu.Constants.dll
+E:\other\AngularJs\MyProject\AnPhu\idn.AnPhu\idn.AnPhu.Constants\bin\Debug\idn.AnPhu.Constants.pdb
+E:\other\AngularJs\MyProject\AnPhu\idn.AnPhu\idn.AnPhu.Constants\obj\Debug\idn.AnPhu.Constants.csproj.CoreCompileInputs.cache
+E:\other\AngularJs\MyProject\AnPhu\idn.AnPhu\idn.AnPhu.Constants\obj\Debug\idn.AnPhu.Constants.dll
+E:\other\AngularJs\MyProject\AnPhu\idn.AnPhu\idn.AnPhu.Constants\obj\Debug\idn.AnPhu.Constants.pdb
+E:\Dieuhoanhapkhau\AnPhu\idn.AnPhu\idn.AnPhu.Constants\bin\Debug\idn.AnPhu.Constants.dll
+E:\Dieuhoanhapkhau\AnPhu\idn.AnPhu\idn.AnPhu.Constants\bin\Debug\idn.AnPhu.Constants.pdb
+E:\Dieuhoanhapkhau\AnPhu\idn.AnPhu\idn.AnPhu.Constants\obj\Debug\idn.AnPhu.Constants.csprojAssemblyReference.cache
+E:\Dieuhoanhapkhau\AnPhu\idn.AnPhu\idn.AnPhu.Constants\obj\Debug\idn.AnPhu.Constants.csproj.CoreCompileInputs.cache
+E:\Dieuhoanhapkhau\AnPhu\idn.AnPhu\idn.AnPhu.Constants\obj\Debug\idn.AnPhu.Constants.dll
+E:\Dieuhoanhapkhau\AnPhu\idn.AnPhu\idn.AnPhu.Constants\obj\Debug\idn.AnPhu.Constants.pdb

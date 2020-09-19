@@ -1,0 +1,107 @@
+﻿
+<div id="sidebar" class="sidebar responsive ace-save-state">
+    <script type="text/javascript">
+                try {
+                    ace.settings.loadState('sidebar');
+                } catch (e) { }
+    </script>
+
+    <ul class="nav nav-list">
+        <li class="">
+            <a href="javascrip:;" class="dropdown-toggle">
+                <i class="menu-icon fa fa-briefcase"></i>
+                <span class="menu-text"> Kho TT xác thực </span>
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+            <b class="arrow"></b>
+            <ul class="submenu">
+                <li><a href="#">abc</a></li>
+            </ul>
+        </li>
+        <li class="">
+            <a class="dropdown-toggle">
+                <i class="menu-icon fa fa-briefcase"></i>
+                <span class="menu-text">Quản lý người dùng</span>
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+            <b class="arrow"></b>
+            <ul class="submenu">
+                <li><a href="@Url.ActionLocalized("Index", "Sys_User")">Danh sách người dùng hệ thống</a></li>
+                @*                <li><a href="@Url.ActionLocalized("Index_Video", "Video")">Danh sách video</a></li>*@
+            </ul>
+        </li>
+        <li class="">
+            <a class="dropdown-toggle">
+                <i class="menu-icon fa fa-briefcase"></i>
+                <span class="menu-text">Quản lý khách hàng</span>
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+            <b class="arrow"></b>
+            <ul class="submenu">
+                <li><a href="@Url.ActionLocalized("Search", "Customer")">Danh sách khách hàng</a></li>
+                @*                <li><a href="@Url.ActionLocalized("Index_Video", "Video")">Danh sách video</a></li>*@
+            </ul>
+        </li>
+
+        <li class="">
+            <a class="dropdown-toggle">
+                <i class="menu-icon fa fa-briefcase"></i>
+                <span class="menu-text">Location</span>
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+            <b class="arrow"></b>
+            <ul class="submenu">
+                <li><a href="@Url.ActionLocalized("Index", "LocationDiscount")">Danh sách thành phố</a></li>
+                @*                <li><a href="@Url.ActionLocalized("Index_Video", "Video")">Danh sách video</a></li>*@
+            </ul>
+        </li>
+
+
+        <li class="">
+            <a class="dropdown-toggle">
+                <i class="menu-icon fa fa-briefcase"></i>
+                <span class="menu-text">Hãng sản xuất</span>
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+            <b class="arrow"></b>
+            <ul class="submenu">
+                <li><a href="@Url.ActionLocalized("Index", "Manufacters")">Danh sách hãng sản xuất</a></li>
+                @*                <li><a href="@Url.ActionLocalized("Index_Video", "Video")">Danh sách video</a></li>*@
+            </ul>
+        </li>
+
+
+        <li class="">
+            <a class="dropdown-toggle">
+                <i class="menu-icon fa fa-briefcase"></i>
+                <span class="menu-text">Tin tức</span>
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+            <b class="arrow"></b>
+            <ul class="submenu">
+                <li><a href="@Url.ActionLocalized("Index", "NewsCategory")">Danh mục tin tức</a></li>
+                <li><a href="@Url.ActionLocalized("Index", "News")">Danh sách tin tức</a></li>
+            </ul>
+        </li>
+
+
+        <li class="">
+            <a class="dropdown-toggle">
+                <i class="menu-icon fa fa-briefcase"></i>
+                <span class="menu-text">Slide</span>
+                <b class="arrow fa fa-angle-down"></b>
+            </a>
+            <b class="arrow"></b>
+            <ul class="submenu">
+                <li><a href="@Url.ActionLocalized("Index", "Slide")">Danh mục slide</a></li>
+                @*<li><a href="@Url.ActionLocalized("Index", "News")">Danh sách tin tức</a></li>*@
+            </ul>
+        </li>
+
+
+    </ul><!-- /.nav-list -->
+
+    <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+        <i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+    </div>
+</div>

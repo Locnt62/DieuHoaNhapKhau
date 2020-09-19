@@ -1,0 +1,109 @@
+﻿@using idn.AnPhu.Biz.Models
+
+@model NewCategory
+
+
+@{
+    ViewBag.Title = "Chỉnh sửa tin tức";
+    var list_cate = ViewBag.Categories as List<NewCategoryBase>;
+}
+
+
+<div class="main-content-inner">
+    <div class="breadcrumb" id="breadcrumbs">
+        <ul class="breadcrumb">
+            <li>
+                <i class="ace-icon fa fa-home home-icon"></i>
+                <a href="#">Home</a>
+            </li>
+            <li><a href="@Url.Action("Admin","Account")">Dashboard</a></li>
+            <li><a href="@Url.Action("Index","NewsCategory")">Danh mục tin tức</a></li>
+            <li class="active">Chỉnh sửa danh mục tin tức</li>
+        </ul>
+    </div>
+    <div class="page-content">
+        <div class="page-header">
+            <h1>Chỉnh sửa loại tin tức</h1>
+        </div>
+        <div class="row">
+            <a id="btn_submit_save" class="btn btn-sm btn-success" href="javascript:;" title="@S("Save")">
+                <span style="font-size:15px"><i class="fa fa-save"></i> @S("Save")</span>
+            </a>
+        </div>
+        @using (Html.BeginForm("Update", "NewsCategory", FormMethod.Post, new { id = "manageForm", @class = "form-horizontal" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true)
+            <div class="row" style="padding-top:50px">
+                <div class="col-sm-10 col-lg-10 col-xs-12">
+                    <div class="form-horizontal" role="form">
+                        <input type="hidden" id="NewCategoryId" name="NewCategoryId" value="@MvcHtmlString.Create(CUtils.StrValue(Model.NewCategoryId))" />
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label no-padding-right"> Tên danh mục <span style="color:red">*</span> </label>
+
+                            <div class="col-sm-8">
+                                <input type="text" id="NewCateName" name="NewCateName" class="col-xs-10 col-sm-5 col-lg-10 VideoCategoryTitle" required value="@MvcHtmlString.Create(CUtils.StrValue(Model.NewCateName))" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-4 control-label no-padding-right">Danh mục  </label>
+                            <div class="col-sm-6">
+                                @{
+                                    var newcategoryid = CUtils.StrValue(Model.NewCategoryId);
+                                }
+                                <select id="NewCategoryId" name="NewCategoryId" class="col-xs-12 col-sm-6 ParentId">
+                                    <option value=""> -- Tất cả --</option>
+                                    @if (list_cate != null && list_cate.Count > 0)
+                                    {
+                                        foreach (var item in list_cate)
+                                        {
+                                            var newcategoryidcur = CUtils.StrValue(item.NewCategoryId);
+                                            <option value=" @MvcHtmlString.Create(CUtils.StrValue(item.NewCategoryId))" @(newcategoryidcur.Equals(newcategoryid) ? "selected" : "")> @MvcHtmlString.Create(CUtils.StrValue(item.NewCateName))</option>
+                                        }
+                                    }
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @{var check = Model.IsActive ? "checked" : "";}
+                            <label class="col-sm-4 control-label no-padding-right">Trạng thái</label>
+                            <label class="col-sm-8">
+                                <input type="checkbox" id="IsActive" name="IsActive" class="ace ace-switch IsActive" value="true" @check />
+                                <span class="lbl" style="margin-top: 5px;"></span>
+                                <input type="hidden" name="IsActive" value="false" />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+
+@section Scripts{
+    @*    @Html.Partial("Script");*@
+
+
+    <script type="text/javascript">
+        setAdminCurrentUrl('@Url.ActionLocalized("Update", "NewsCategory", new {area = "Auth"})');
+    </script>
+    <script type="text/javascript">
+        processAjaxForm($('#manageForm'), function (response) {
+            processAjaxFormResult(response);
+
+        });
+    </script>
+
+    <script type="text/javascript">
+        $('#btn_submit_save').click(function () {
+         @*   var check = CheckForm();
+            if (check) {*@
+                $("#manageForm").attr("action", '@Url.ActionLocalized("Update")').submit();
+         @*   }*@
+
+        });
+    </script>
+}
+
